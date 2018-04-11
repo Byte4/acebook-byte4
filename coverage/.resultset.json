@@ -1,17 +1,18 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/antcin/Desktop/gitDir/acebook-byte4/spec/models/user_spec.rb": [
+      "/Users/antcin/Desktop/gitDir/acebook-byte4/spec/mailers/devise_mailer_spec.rb": [
         1,
-        null,
-        null,
-        null,
-        null,
         null,
         1,
         1,
         1,
-        2,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -573,6 +574,6 @@
         null
       ]
     },
-    "timestamp": 1523480035
+    "timestamp": 1523480914
   }
 }
