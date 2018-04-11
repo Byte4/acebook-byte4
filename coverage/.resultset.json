@@ -1,33 +1,23 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/antcin/Desktop/gitDir/acebook-byte4/spec/controllers/posts_controller_spec.rb": [
+      "/Users/antcin/Desktop/gitDir/acebook-byte4/spec/features/sign_in_spec.rb": [
         1,
+        null,
+        1,
+        2,
         null,
         1,
         1,
         1,
         1,
-        0,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        0,
-        null,
-        null,
-        1,
-        1,
-        0,
-        null,
         null,
         null,
         1,
         1,
         1,
-        0,
+        1,
+        1,
         null,
         null,
         null
@@ -37,6 +27,7 @@
         1,
         1,
         null,
+        1,
         1,
         1,
         1,
@@ -111,6 +102,11 @@
         1,
         null,
         1,
+        null,
+        1,
+        1,
+        1,
+        null,
         null,
         null,
         null,
@@ -538,11 +534,22 @@
         null,
         null
       ],
+      "/Users/antcin/Desktop/gitDir/acebook-byte4/spec/factories/user.rb": [
+        null,
+        null,
+        1,
+        1,
+        2,
+        2,
+        null,
+        null
+      ],
       "/Users/antcin/Desktop/gitDir/acebook-byte4/config/routes.rb": [
         1,
         1,
         null,
         null,
+        1,
         1,
         null,
         null
@@ -553,6 +560,7 @@
         null,
         1,
         null,
+        null,
         null
       ],
       "/Users/antcin/Desktop/gitDir/acebook-byte4/app/models/application_record.rb": [
@@ -561,6 +569,11 @@
         null
       ],
       "/Users/antcin/Desktop/gitDir/acebook-byte4/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/antcin/Desktop/gitDir/acebook-byte4/spec/support/factory_bot.rb": [
+        1,
         1,
         null
       ],
@@ -576,7 +589,7 @@
         null,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
@@ -592,38 +605,11 @@
         1,
         null
       ],
-      "/Users/antcin/Desktop/gitDir/acebook-byte4/spec/features/user_can_submit_posts_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null
-      ],
-      "/Users/antcin/Desktop/gitDir/acebook-byte4/spec/models/post_spec.rb": [
-        1,
-        null,
-        1,
-        2,
-        null
-      ],
       "/Users/antcin/Desktop/gitDir/acebook-byte4/app/models/post.rb": [
-        1,
-        null
-      ],
-      "/Users/antcin/Desktop/gitDir/acebook-byte4/spec/models/user_spec.rb": [
-        1,
-        null,
-        1,
         1,
         null
       ]
     },
-    "timestamp": 1523458812
+    "timestamp": 1523478449
   }
 }
