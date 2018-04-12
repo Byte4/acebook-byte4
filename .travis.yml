@@ -2,6 +2,9 @@ env:
   global:
     - CC_TEST_REPORTER_ID=d3b084e1eca33c3999801a495b70ee5e7c55524b541e1f893ada9c89e4243af3
 
+notifications:
+  email: false
+
 rvm: '2.5.0'
 
 before_install:
