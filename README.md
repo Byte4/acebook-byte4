@@ -1,4 +1,4 @@
-<a href="url"><img src="/public/logo.png" align="left" height="48" width="48" ></a> 
+<img src="/public/logo.png" align="left" height="50" width="50" >
 # AceBook [![Test Coverage](https://api.codeclimate.com/v1/badges/70ad0217d63f10aac886/test_coverage)](https://codeclimate.com/github/Byte4/acebook-byte4/test_coverage)
 
 AceBook is a social media platform that enables users to share their posts and connect with each other.
