@@ -1,5 +1,4 @@
-<img src="/public/logo.png?raw=true">
-
+<a href="url"><img src="/public/logo.png" align="left" height="48" width="48" ></a> 
 # AceBook [![Test Coverage](https://api.codeclimate.com/v1/badges/70ad0217d63f10aac886/test_coverage)](https://codeclimate.com/github/Byte4/acebook-byte4/test_coverage)
 
 AceBook is a social media platform that enables users to share their posts and connect with each other.
@@ -11,15 +10,15 @@ Follow the instructions below to download a copy of the project and run it local
 ### Technologies used
 ----
 - Back-end
-  - Ruby on Rails[http://rubyonrails.org/]
-  - Devise [https://github.com/plataformatec/devise]
+  - [Ruby on Rails][http://rubyonrails.org/]
+  - [Devise] [https://github.com/plataformatec/devise]
 - Front-end
   - HTML
-  - Bootstrap[https://getbootstrap.com/]
+  - [Bootstrap][https://getbootstrap.com/]
 - Testing
-  - RSpec [http://rspec.info/]
-  - Capybara [https://github.com/teamcapybara/capybara]
-  - Selenium WebDriver[https://www.seleniumhq.org/projects/webdriver/]
+  - [RSpec][http://rspec.info/]
+  - [Capybara][https://github.com/teamcapybara/capybara]
+  - [Selenium WebDriver][https://www.seleniumhq.org/projects/webdriver/]
 
 
 ### Prerequisites
@@ -90,4 +89,4 @@ Coming soon
 ## Contributing maybe?
 
 ## Authors
-Agnes Donat[https://github.com/agnesdonat], Ammar Arjomand[https://github.com/Ajibaji], Irfan Durrani[https://github.com/durranee], Antonio Ciniglio[https://github.com/antcin]
+[Agnes Donat][https://github.com/agnesdonat], [Ammar Arjomand][https://github.com/Ajibaji], [Irfan Durrani][https://github.com/durranee], [Antonio Ciniglio][https://github.com/antcin]
