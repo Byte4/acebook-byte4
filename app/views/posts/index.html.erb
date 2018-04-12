@@ -1,10 +1,19 @@
+<% require 'date' %>
 <% @posts.each do |post| %>
 
-  <div class="card">
-    <div class="card-body">
-      <%= simple_format(post.message) %>
+    <div class="card" style="width: 50rem; margin: 5px;">
+      <div class="card-body">
+        <%= simple_format(post.message) %>
+      </div>
+      <div class="card-footer quote-footer" style="padding: 0px;">
+        <div class="float-left col-6">
+          <a href="#">Like</a>
+        </div>
+        <div class="float-right text-right col-6">
+          Posted at: <%= post.created_at.strftime("%d/%m/%Y at %I:%M%p") %>
+        </div>
+      </div>
     </div>
-  </div>
 
 <% end %>
 
