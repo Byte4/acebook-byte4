@@ -5,11 +5,9 @@
 AceBook is a social media platform that enables users to share their posts and connect with each other.
 
 ## Getting started
-
 Follow the instructions below to download a copy of the project and run it locally for testing and development purposes.
 
 ### Technologies used
-----
 - Back-end
   - [Ruby on Rails](http://rubyonrails.org/)
   - [Devise](https://github.com/plataformatec/devise)
@@ -23,7 +21,6 @@ Follow the instructions below to download a copy of the project and run it local
 
 
 ### Prerequisites
-
 - Verify that a current version of Ruby is installed:
 ```
 ruby -v
@@ -50,17 +47,14 @@ In a web browser, visit `localhost:3000` and register to Acebook to start postin
 
 
 ### Some screenshot and description of functionalities?
-
 Coming soon
 
 ### Testing
-
 ```
 rspec # Run the tests to ensure it works
 ```
 
 ### Examples of tests
-
 The great majority of testing involved ensuring a successful implementation of the functionalities (e.g. successful web requests, correct page redirection, successful authentication, views displaying the appropriate messages). Below an example of 'functional test' to ensure a correct user sign up.
 
 ```
@@ -84,7 +78,6 @@ end
 ```
 
 ## Deployment
-
 Coming soon
 
 ## Contributing maybe?
