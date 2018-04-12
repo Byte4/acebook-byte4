@@ -1,6 +1,9 @@
 <% @posts.each do |post| %>
-  <p><%= post.message %></p>
+<p>---------------------</p>
+  <p><%= simple_format(post.message) %></p>
 <% end %>
+
+<p>---------------------</p>
 
 <%= link_to new_post_path do %>
   New post
