@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe PostsController, type: :controller do
 
   before (:each) do
-  @user = User.create! (
+  @user = User.create!(
     {
       :email => 'user@test.com',
       :password => 'password',
