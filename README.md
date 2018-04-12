@@ -11,15 +11,15 @@ Follow the instructions below to download a copy of the project and run it local
 ### Technologies used
 ----
 - Back-end
-  - [Ruby on Rails][http://rubyonrails.org/]
-  - [Devise] [https://github.com/plataformatec/devise]
+  - [Ruby on Rails](http://rubyonrails.org/)
+  - [Devise](https://github.com/plataformatec/devise)
 - Front-end
   - HTML
-  - [Bootstrap][https://getbootstrap.com/]
+  - [Bootstrap](https://getbootstrap.com/)
 - Testing
-  - [RSpec][http://rspec.info/]
-  - [Capybara][https://github.com/teamcapybara/capybara]
-  - [Selenium WebDriver][https://www.seleniumhq.org/projects/webdriver/]
+  - [RSpec](http://rspec.info/)
+  - [Capybara](https://github.com/teamcapybara/capybara)
+  - [Selenium WebDriver](https://www.seleniumhq.org/projects/webdriver/)
 
 
 ### Prerequisites
@@ -90,4 +90,4 @@ Coming soon
 ## Contributing maybe?
 
 ## Authors
-[Agnes Donat][https://github.com/agnesdonat], [Ammar Arjomand][https://github.com/Ajibaji], [Irfan Durrani][https://github.com/durranee], [Antonio Ciniglio][https://github.com/antcin]
+[Agnes Donat](https://github.com/agnesdonat), [Ammar Arjomand](https://github.com/Ajibaji), Irfan Durrani](https://github.com/durranee), [Antonio Ciniglio](https://github.com/antcin)
