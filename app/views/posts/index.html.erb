@@ -5,9 +5,9 @@
       <div class="card-body">
         <%= simple_format(post.message) %>
       </div>
-      <div class="card-footer quote-footer" style="padding: 0px;">
+      <div class="card-footer quote-footer" style="padding: 0px; font-size: 0.75em;">
         <div class="float-left col-6">
-          <a href="#">Like</a>
+          <a href="#"><i class="fas fa-thumbs-up"></i></a>
         </div>
         <div class="float-right text-right col-6">
           Posted at: <%= post.created_at.strftime("%d/%m/%Y at %I:%M%p") %>
