@@ -90,4 +90,4 @@ Coming soon
 ## Contributing maybe?
 
 ## Authors
-[Agnes Donat](https://github.com/agnesdonat), [Ammar Arjomand](https://github.com/Ajibaji), Irfan Durrani](https://github.com/durranee), [Antonio Ciniglio](https://github.com/antcin)
+[Agnes Donat](https://github.com/agnesdonat), [Ammar Arjomand](https://github.com/Ajibaji), [Irfan Durrani](https://github.com/durranee), [Antonio Ciniglio](https://github.com/antcin)
