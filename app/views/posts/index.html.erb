@@ -1,26 +1,27 @@
 <% require 'date' %>
-<% @posts.each do |post| %>
+  <% @posts.each do |post| %>
 
     <div class="card" style="width: 50rem; margin: 5px;">
       <div class="card-body">
         <%= simple_format(post.message) %>
       </div>
-<<<<<<< HEAD
-      <div class="card-footer quote-footer" style="padding: 0px; font-size: 0.75em;">
-=======
       <div class="card-footer quote-footer" style="padding: 0px; font-size: 0.8em;">
->>>>>>> cbb2a575569ff0a5da94ae3d104324d4f290fd02
         <div class="float-left col-6">
-          <a href="#"><i class="fas fa-thumbs-up"></i></a>
+          <a href="#">
+            <a href="#">
+              <i class="fas fa-thumbs-up"></i>
+            </a>
+          </a>
         </div>
         <div class="float-right text-right col-6">
-          Posted at: <%= post.created_at.strftime("%d/%m/%Y at %I:%M%p") %>
+          Posted at:
+          <%= post.created_at.strftime("%d/%m/%Y at %I:%M%p") %>
         </div>
       </div>
     </div>
 
-<% end %>
+  <% end %>
 
-<%= link_to new_post_path do %>
-New post
+  <%= link_to new_post_path do %>
+  New post
 <% end %>
