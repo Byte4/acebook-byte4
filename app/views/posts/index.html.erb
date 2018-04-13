@@ -33,9 +33,13 @@
       <%= link_to new_comment_path do %>
       New comment
       <% end %>
-      <% @comments.each do |comment| %>
-      <%= simple_format(comment.message) %>
+
+      <% if @comments.find_by_id(post.id) %>
       <% end %>
+      <!-- <% thisPostComments = @comments.find(post.id) %>
+      <% thisPostComments.each do |comment| %>
+       <%= simple_format(thisPostComments.message) %>
+      <% end %> -->
     </div>
 
   <% end %>

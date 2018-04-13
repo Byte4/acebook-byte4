@@ -15,13 +15,6 @@ ActiveRecord::Schema.define(version: 20180413105844) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "articles", force: :cascade do |t|
-    t.string "title"
-    t.text "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "comments", force: :cascade do |t|
     t.string "message"
     t.bigint "users_id"
@@ -32,20 +25,8 @@ ActiveRecord::Schema.define(version: 20180413105844) do
     t.index ["users_id"], name: "index_comments_on_users_id"
   end
 
-  create_table "news", force: :cascade do |t|
-    t.text "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "posts", force: :cascade do |t|
     t.string "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "samples", force: :cascade do |t|
-    t.text "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
