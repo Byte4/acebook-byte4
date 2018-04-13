@@ -4,10 +4,7 @@
 
 AceBook is a social media platform that enables users to share their posts and connect with each other.
 
-## Getting started
-Follow the instructions below to download a copy of the project and run it locally for testing and development purposes.
-
-### Technologies used
+## Technologies used
 - Back-end
   - [Ruby on Rails](http://rubyonrails.org/)
   - [Devise](https://github.com/plataformatec/devise)
@@ -19,6 +16,9 @@ Follow the instructions below to download a copy of the project and run it local
   - [Capybara](https://github.com/teamcapybara/capybara)
   - [Selenium WebDriver](https://www.seleniumhq.org/projects/webdriver/)
 
+
+## Getting started
+Follow the instructions below to download a copy of the project and run it locally for testing and development purposes.
 
 ### Prerequisites
 - Verify that a current version of Ruby is installed:
