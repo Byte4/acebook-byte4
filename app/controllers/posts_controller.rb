@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  # before_action CommentsController.:index, only: [:index]
   def new
     @post = Post.new
   end
@@ -9,7 +10,9 @@ class PostsController < ApplicationController
   end
 
   def index
+    # CommentsController.index
     @posts = Post.all.reverse
+    @comments = Comment.all
   end
 
   private

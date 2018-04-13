@@ -30,6 +30,12 @@
           <%= post.created_at.strftime("%d/%m/%Y at %I:%M%p") %> </i>
         </div>
       </div>
+      <%= link_to new_comment_path do %>
+      New comment
+      <% end %>
+      <% @comments.each do |comment| %>
+      <%= simple_format(comment.message) %>
+      <% end %>
     </div>
 
   <% end %>
