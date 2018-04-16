@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 feature "Creating comments" do
-  let(:user) {FactoryBot.create(:user)}
-  let(:post) {FactoryBot.create(:post, user_id: user.id)}
+  let!(:user) {FactoryBot.create(:user)}
+  let!(:post) {FactoryBot.create(:post, user_id: user.id)}
 
 
   scenario "User wants to comment on a post"do
@@ -14,7 +14,7 @@ feature "Creating comments" do
     save_and_open_page
     fill_in "Comment", with: "test"
     click_button "Submit"
-    expect(page).to have_content("test")
+    expect(page).to have_css("div.comments#{post.id}", text: 'test')
 
   end
 end

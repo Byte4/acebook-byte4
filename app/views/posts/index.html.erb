@@ -47,6 +47,7 @@
     <div>
       <%= form_for [post, post.comments.new] do |f| %>
       <%= f.text_field :content, placeholder: 'Comment' %>
+      <%= f.submit 'Submit' %>
       <% end %>
     </div>
     </div>

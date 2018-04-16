@@ -6,7 +6,7 @@
         null,
         1,
         2,
-        1,
+        2,
         null,
         null,
         1,
@@ -17,8 +17,8 @@
         1,
         1,
         1,
-        0,
-        0,
+        1,
+        1,
         null,
         null,
         null
@@ -608,6 +608,12 @@
         1,
         null
       ],
+      "/Users/agnesdonat/Projects/acebook-byte4/app/models/post.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/agnesdonat/Projects/acebook-byte4/app/controllers/posts_controller.rb": [
         1,
         1,
@@ -667,13 +673,36 @@
         null,
         null
       ],
-      "/Users/agnesdonat/Projects/acebook-byte4/app/models/post.rb": [
+      "/Users/agnesdonat/Projects/acebook-byte4/app/models/comment.rb": [
         1,
         1,
         1,
         null
+      ],
+      "/Users/agnesdonat/Projects/acebook-byte4/app/controllers/comments_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1523893249
+    "timestamp": 1523895214
   }
 }

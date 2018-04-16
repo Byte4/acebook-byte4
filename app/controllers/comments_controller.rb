@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  
+
   before_action :set_post
 
   def create
@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:commment).permit(:content)
+    params.require(:comment).permit(:content)
   end
 
   def set_post
