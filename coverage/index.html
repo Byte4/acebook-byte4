@@ -14,14 +14,14 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-04-16T16:29:34+01:00">2018-04-16T16:29:34+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-04-16T18:17:24+01:00">2018-04-16T18:17:24+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">91.72%</span></span>
+    (<span class="covered_percent"><span class="green">93.31%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
@@ -31,10 +31,10 @@
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>42</b> files in total.
-    <b>326</b> relevant lines. 
-    <span class="green"><b>299</b> lines covered</span> and
-    <span class="red"><b>27</b> lines missed </span>
+    <b>43</b> files in total.
+    <b>329</b> relevant lines. 
+    <span class="green"><b>307</b> lines covered</span> and
+    <span class="red"><b>22</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#5ca63b0bf08c05b0aa2522c462a923161ffb7e34" class="src_link" title="app/controllers/likes_controller.rb">app/controllers/likes_controller.rb</a></td>
-        <td class="red strong">25.0 %</td>
+        <td class="red strong">75.0 %</td>
         <td>17</td>
         <td>8</td>
-        <td>2</td>
         <td>6</td>
-        <td>0.3</td>
+        <td>2</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
@@ -77,7 +77,7 @@
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>4.4</td>
+        <td>4.1</td>
       </tr>
       
       <tr>
@@ -331,13 +331,23 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#d1d00f455233ab90142b17c9023e385e0a3aaecd" class="src_link" title="spec/factories/user.rb">spec/factories/user.rb</a></td>
+        <td class="strong"><a href="#44e13e0681cf02869c058a4ae3dcb88f8441986c" class="src_link" title="spec/factories/post.rb">spec/factories/post.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>7</td>
-        <td>5</td>
-        <td>5</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
-        <td>5.2</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#d1d00f455233ab90142b17c9023e385e0a3aaecd" class="src_link" title="spec/factories/user.rb">spec/factories/user.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>8</td>
+        <td>6</td>
+        <td>6</td>
+        <td>0</td>
+        <td>4.5</td>
       </tr>
       
       <tr>
@@ -382,12 +392,12 @@
       
       <tr>
         <td class="strong"><a href="#57be8378cd7fc4d930c7231d9aa9a4ac347ccc05" class="src_link" title="spec/features/user_can_like_spec.rb">spec/features/user_can_like_spec.rb</a></td>
-        <td class="green strong">93.75 %</td>
-        <td>34</td>
-        <td>16</td>
-        <td>15</td>
-        <td>1</td>
-        <td>1.0</td>
+        <td class="green strong">100.0 %</td>
+        <td>22</td>
+        <td>14</td>
+        <td>14</td>
+        <td>0</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
@@ -532,11 +542,11 @@
         <div class="source_table" id="5ca63b0bf08c05b0aa2522c462a923161ffb7e34">
   <div class="header">
     <h3>app/controllers/likes_controller.rb</h3>
-    <h4><span class="red">25.0 %</span> covered</h4>
+    <h4><span class="red">75.0 %</span> covered</h4>
     <div>
       <b>8</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
-      <span class="red"><b>6</b> lines missed.</span>
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
   
@@ -573,20 +583,20 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="6">
-          
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
           
           <code class="ruby">    like = Like.where(&#39;post_id = ? AND user_id = ?&#39;, params[:post_id], current_user.id)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
-          
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
           
           <code class="ruby">    if like.count &lt;= 0</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="8">
-          
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
           
           <code class="ruby">      Like.create({&#39;post_id&#39;: params[:post_id], &#39;user_id&#39;: current_user.id})</code>
         </li>
@@ -615,8 +625,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
-          
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
           
           <code class="ruby">    redirect_to posts_url</code>
         </li>
@@ -676,8 +686,8 @@
           <code class="ruby">  def new</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="3">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="4" data-linenumber="3">
+          <span class="hits">4</span>
           
           <code class="ruby">    @post = Post.new</code>
         </li>
@@ -700,14 +710,14 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="7">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="5" data-linenumber="7">
+          <span class="hits">5</span>
           
           <code class="ruby">    @post = Post.create(post_params.merge(user_id: current_user.id))</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="8">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="5" data-linenumber="8">
+          <span class="hits">5</span>
           
           <code class="ruby">    redirect_to posts_url</code>
         </li>
@@ -772,8 +782,8 @@
           <code class="ruby">  def post_params</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="19">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="5" data-linenumber="19">
+          <span class="hits">5</span>
           
           <code class="ruby">    params.require(:post).permit(:message, :created_at)</code>
         </li>
@@ -5654,7 +5664,7 @@
         <li class="never" data-hits="" data-linenumber="3">
           
           
-          <code class="ruby">    </code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -5674,13 +5684,74 @@
 </div>
 
       
+        <div class="source_table" id="44e13e0681cf02869c058a4ae3dcb88f8441986c">
+  <div class="header">
+    <h3>spec/factories/post.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">FactoryBot.define do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  factory :post do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    message &#39;test message&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    user_id 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="d1d00f455233ab90142b17c9023e385e0a3aaecd">
   <div class="header">
     <h3>spec/factories/user.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>6</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5718,13 +5789,19 @@
           <code class="ruby">    password { Devise.friendly_token.first(8) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    id 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">end</code>
@@ -6306,11 +6383,11 @@
         <div class="source_table" id="57be8378cd7fc4d930c7231d9aa9a4ac347ccc05">
   <div class="header">
     <h3>spec/features/user_can_like_spec.rb</h3>
-    <h4><span class="green">93.75 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>16</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <b>14</b> relevant lines. 
+      <span class="green"><b>14</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -6350,172 +6427,100 @@
         <li class="covered" data-hits="2" data-linenumber="6">
           <span class="hits">2</span>
           
-          <code class="ruby">  let(:user) {FactoryBot.create(:user)}</code>
+          <code class="ruby">  let!(:user) {FactoryBot.create(:user)}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  let!(:post) {FactoryBot.create(:post)}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def fill_in_signin_fields</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;user[email]&#39;, with: user.email</code>
+          <code class="ruby">  def fill_in_signin_fields</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;user[password]&#39;, with: user.password</code>
+          <code class="ruby">    fill_in &#39;user[email]&#39;, with: user.email</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_button &#39;Log in&#39;</code>
+          <code class="ruby">    fill_in &#39;user[password]&#39;, with: user.password</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    click_button &#39;Log in&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="14">
           
-          <code class="ruby">  scenario &#39;user can visit and like posts&#39; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit root_path</code>
+          <code class="ruby">  scenario &#39;user can visit and like posts&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in_signin_fields</code>
+          <code class="ruby">    visit root_path</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_link &quot;New post&quot;</code>
+          <code class="ruby">    fill_in_signin_fields</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &quot;Message&quot;, with: &quot;Hello, world!&quot;</code>
+          <code class="ruby">    find(&quot;#like-#{post.id}&quot;).click</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_button &quot;Submit&quot;</code>
+          <code class="ruby">    expect(&quot;#likes-counter-#{post.id}&quot;).to have_content(&quot;1&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    click_link(&#39;a#1&#39;)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="22">
-          
-          
-          <code class="ruby">    expect(page).to have_content(&quot;1&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
-          
-          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby">  #</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="25">
-          
-          
-          <code class="ruby">  # scenario &#39;check to see if date appears on index page&#39; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby">  #   visit root_path</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby">  #   fill_in_signin_fields</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
-          
-          
-          <code class="ruby">  #   click_link &quot;New post&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="29">
-          
-          
-          <code class="ruby">  #   fill_in &quot;Message&quot;, with: &quot;Hello, world!&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="30">
-          
-          
-          <code class="ruby">  #   click_button &quot;Submit&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="31">
-          
-          
-          <code class="ruby">  #   expect(page).to have_content(Time.now.strftime(&quot;%d/%m/%Y at %I:%M%p&quot;))</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="32">
-          
-          
-          <code class="ruby">  # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">end</code>

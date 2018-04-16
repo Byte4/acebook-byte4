@@ -656,12 +656,22 @@
         null,
         null
       ],
+      "/Users/iD/Projects/Makers/Week8/acebook-byte4/spec/factories/post.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/iD/Projects/Makers/Week8/acebook-byte4/spec/factories/user.rb": [
         1,
         1,
         8,
         8,
         8,
+        1,
         null,
         null
       ],
@@ -716,14 +726,14 @@
         null,
         null,
         1,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
         null,
         0,
         0,
         null,
-        0,
+        1,
         null,
         null,
         null,
@@ -782,15 +792,15 @@
       "/Users/iD/Projects/Makers/Week8/acebook-byte4/app/controllers/posts_controller.rb": [
         1,
         1,
+        4,
+        null,
+        null,
+        1,
+        5,
         5,
         null,
         null,
         1,
-        6,
-        6,
-        null,
-        null,
-        1,
         12,
         12,
         null,
@@ -798,7 +808,7 @@
         1,
         null,
         1,
-        6,
+        5,
         null,
         null
       ],
@@ -899,6 +909,7 @@
         1,
         null,
         2,
+        2,
         null,
         1,
         1,
@@ -911,19 +922,6 @@
         1,
         1,
         1,
-        1,
-        null,
-        1,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null,
         null,
         null
@@ -1150,6 +1148,6 @@
         null
       ]
     },
-    "timestamp": 1523892574
+    "timestamp": 1523899044
   }
 }

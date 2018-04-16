@@ -25,15 +25,13 @@
       </div>
       <div class="card-footer quote-footer" style="padding: 0px; font-size: 0.8em;">
         <div class="float-left col-6">
-          <%= link_to post_likes_path(post), id: post.id, method: :post do %>
-            <i class="fas fa-thumbs-up"></i>
+          <%= link_to post_likes_path(post), id: "like-#{post.id}", method: :post do %>
+            <i class="fas fa-thumbs-up" id ="thumbs-up-<%=post.id%>"></i>
             <% end %>
-            <span id="likesCounter">
+            <span id="likes-counter-<%=post.id%>">
               <% likecount = Like.where(post_id: post.id).count %>
               <%= likecount if likecount > 0 %>
             </span>
-
-
         </div>
         <div class="float-right text-right col-6">
           <i>Posted on:
