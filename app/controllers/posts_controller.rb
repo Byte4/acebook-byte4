@@ -10,6 +10,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.reverse
+    @likes = Like.all
   end
 
   private
