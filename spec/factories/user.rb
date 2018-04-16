@@ -3,5 +3,6 @@ FactoryBot.define do
     email { FFaker::Internet.email }
     first_name { FFaker::Internet.name }
     password { Devise.friendly_token.first(8) }
+    id 1
   end
 end

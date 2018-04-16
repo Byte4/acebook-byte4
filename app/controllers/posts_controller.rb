@@ -12,6 +12,8 @@ class PostsController < ApplicationController
     @posts = Post.all.reverse
   end
 
+
+
   private
 
   def post_params

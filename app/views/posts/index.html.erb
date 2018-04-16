@@ -37,6 +37,18 @@
           </i>
         </div>
       </div>
+      <div>
+        <% if post.comments %>
+        <% post.comments.each do |comment| %>
+        <%= comment.content %>
+        <% end %>
+        <% end %>
+      </div>
+    <div>
+      <%= form_for [post, post.comments.new] do |f| %>
+      <%= f.text_field :content, placeholder: 'Comment' %>
+      <% end %>
+    </div>
     </div>
 
   <% end %>
