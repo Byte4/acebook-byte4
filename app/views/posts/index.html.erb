@@ -17,9 +17,8 @@
 
     <div class="card" style="width: 50rem; margin: 5px;">
     <div class="card-header" style="padding: 0px; font-size: 0.8em;">
-      <b><%= User.find(post.user_id).first_name %> </b>
+      <b> <%= post.user.first_name %> </b>
     </div>
-
       <div class="card-body">
         <%= simple_format(post.message) %>
       </div>
@@ -29,8 +28,7 @@
             <i class="fas fa-thumbs-up" id ="thumbs-up-<%=post.id%>"></i>
             <% end %>
             <span id="likes-counter-<%=post.id%>">
-              <% likecount = Like.where(post_id: post.id).count %>
-              <%= likecount if likecount > 0 %>
+              <%= likecount = post.likes.count if post.likes.count > 0 %>
             </span>
         </div>
         <div class="float-right text-right col-6">
@@ -40,7 +38,6 @@
         </div>
       </div>
     </div>
-
   <% end %>
 
   <%= link_to new_post_path do %>
