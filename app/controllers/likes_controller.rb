@@ -7,7 +7,6 @@ class LikesController < ApplicationController
     if like.count <= 0
       Like.create({'post_id': params[:post_id], 'user_id': current_user.id})
     else
-      puts like.first.id
       Like.destroy(like.first.id)
     end
     redirect_to posts_url

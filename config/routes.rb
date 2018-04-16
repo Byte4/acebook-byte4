@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :dislikes
   resources :likes
   devise_for :users, controllers: {
         sessions: 'users/sessions',
@@ -9,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :posts do
     resources :likes
+    resources :dislikes
   end
   root to: 'posts#index'
 

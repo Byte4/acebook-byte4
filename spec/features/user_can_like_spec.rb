@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'date'
 
-RSpec.feature "Timeline", type: :feature do
+RSpec.feature "Like", type: :feature do
 
   let!(:user) {FactoryBot.create(:user)}
   let!(:post) {FactoryBot.create(:post)}
@@ -17,6 +17,14 @@ RSpec.feature "Timeline", type: :feature do
     fill_in_signin_fields
     find("#like-#{post.id}").click
     expect("#likes-counter-#{post.id}").to have_content("1")
+  end
+
+  scenario 'clicking twice on like button will undo the like' do
+    visit root_path
+    fill_in_signin_fields
+    find("#like-#{post.id}").click
+    find("#like-#{post.id}").click
+    expect("#likes-counter-#{post.id}").not_to have_content("1")
   end
 
 end

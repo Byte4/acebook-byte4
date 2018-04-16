@@ -23,15 +23,24 @@
         <%= simple_format(post.message) %>
       </div>
       <div class="card-footer quote-footer" style="padding: 0px; font-size: 0.8em;">
-        <div class="float-left col-6">
+        <div class="float-left col-1">
           <%= link_to post_likes_path(post), id: "like-#{post.id}", method: :post do %>
             <i class="fas fa-thumbs-up" id ="thumbs-up-<%=post.id%>"></i>
             <% end %>
             <span id="likes-counter-<%=post.id%>">
-              <%= likecount = post.likes.count if post.likes.count > 0 %>
+              <%= post.likes.count if post.likes.count > 0 %>
             </span>
         </div>
-        <div class="float-right text-right col-6">
+
+        <div class="float-left col-1">
+          <%= link_to post_dislikes_path(post), id: "dislike-#{post.id}", method: :post do %>
+            <i class="fas fa-thumbs-down" id ="thumbs-down-<%=post.id%>"></i>
+            <% end %>
+            <span id="dislikes-counter-<%=post.id%>">
+              <%= post.dislikes.count if post.dislikes.count > 0 %></span>
+        </div>
+
+        <div class="float-right text-right col-10">
           <i>Posted on:
             <%= post.created_at.strftime("%d/%m/%Y at %I:%M%p") %>
           </i>
