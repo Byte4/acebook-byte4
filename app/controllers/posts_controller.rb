@@ -1,12 +1,10 @@
 class PostsController < ApplicationController
   def new
-    @post = current_user.posts.build
-    # @post = Post.new
+    @post = Post.new
   end
 
   def create
-    @post = current_user.posts.build(post_params)
-    # @post = Post.create(post_params.merge(user_id: current_user.id))
+    @post = Post.create(post_params.merge(user_id: current_user.id))
     redirect_to posts_url
   end
 
