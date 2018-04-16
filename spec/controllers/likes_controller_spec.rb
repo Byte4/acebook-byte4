@@ -57,13 +57,6 @@ RSpec.describe LikesController, type: :controller do
     end
   end
 
-  describe "GET #new" do
-    it "returns a success response" do
-      get :new, params: {}, session: valid_session
-      expect(response).to be_success
-    end
-  end
-
   describe "GET #edit" do
     it "returns a success response" do
       like = Like.create! valid_attributes

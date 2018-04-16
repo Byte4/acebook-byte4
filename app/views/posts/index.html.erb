@@ -25,10 +25,9 @@
       </div>
       <div class="card-footer quote-footer" style="padding: 0px; font-size: 0.8em;">
         <div class="float-left col-6">
-          <%= link_to post_likes_path(post), method: :post do %>
+          <%= link_to post_likes_path(post), id: post.id, method: :post do %>
             <i class="fas fa-thumbs-up"></i>
             <% end %>
-
             <span id="likesCounter">
               <% likecount = Like.where(post_id: post.id).count %>
               <%= likecount if likecount > 0 %>
