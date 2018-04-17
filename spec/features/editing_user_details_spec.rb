@@ -5,13 +5,8 @@ RSpec.feature "Editing user details", type: :feature do
 
   let(:user) {FactoryBot.create(:user)}
 
-  def fill_in_signin_fields
-    find('#navbar-login-div').fill_in 'user[email]', with: user.email
-    find('#navbar-login-div').fill_in 'user[password]', with: user.password
-    click_button 'Log in'
-  end
   scenario 'user can edit first and last name' do
-    visit root_path
+    visit unauthenticated_root_path
     fill_in_signin_fields
     click_link "Edit"
     find("#edit-acct-info-sheet").fill_in "user[first_name]", with: "Maria"

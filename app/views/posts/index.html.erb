@@ -1,7 +1,9 @@
 
 <% require 'date' %>
+  <div class="Welcome" style = "margin: 1em">
+    <strong><%="Hello, #{user_signed_in? ? current_user.first_name : "Guest"}"%></strong>
+  </div>
   <% @posts.each do |post| %>
-
     <div class="card" style="width: 50rem; margin: 5px;">
     <div class="card-header" style="padding: 0px; font-size: 0.8em;">
       <b> <%= post.user.first_name %> </b>
