@@ -40,7 +40,7 @@
       <div>
         <% if post.comments %>
         <% post.comments.each do |comment| %>
-        <%= comment.content %>
+        <div id='<%="comment-#{comment.id}"%>'><%= comment.content %></div>
         <% end %>
         <% end %>
       </div>
