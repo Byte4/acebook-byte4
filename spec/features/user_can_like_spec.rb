@@ -16,7 +16,8 @@ RSpec.feature "Like", type: :feature do
     visit root_path
     fill_in_signin_fields
     find("#like-#{post.id}").click
-    expect("#likes-counter-#{post.id}").to have_content("1")
+    # expect("#likes-counter-#{post.id}").to have_content("1")
+    expect(page).to have_css("span#likes-counter-#{post.id}", text: '1')
   end
 
   scenario 'clicking twice on like button will undo the like' do
@@ -24,7 +25,7 @@ RSpec.feature "Like", type: :feature do
     fill_in_signin_fields
     find("#like-#{post.id}").click
     find("#like-#{post.id}").click
-    expect("#likes-counter-#{post.id}").not_to have_content("1")
+    expect(page).not_to have_css("span#likes-counter-#{post.id}", text: '1')
   end
 
 end
