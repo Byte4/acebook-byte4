@@ -8,10 +8,10 @@ class CommentsController < ApplicationController
 
     if @comment.save
       flash[:success] = "You commented the hell out of that post!"
-      redirect_to root_path
+      redirect_to authenticate_root_path
     else
       flash[:alert] = "Check the comment form, something went horribly wrong."
-      render root_path
+      render authenticate_root_path
     end
   end
 
@@ -20,7 +20,7 @@ class CommentsController < ApplicationController
 
     @comment.destroy
     flash[:success] = "Comment deleted"
-    redirect_to root_path
+    redirect_to authenticate_root_path
   end
 
   private
