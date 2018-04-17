@@ -30,8 +30,8 @@ ActiveRecord::Migration.maintain_test_schema!
 module AuthHelpers
   def sign_in_with (user)
     visit '/'
-    fill_in 'user[email]', with: user.email
-    fill_in 'user[password]', with: user.password
+    find('#navbar-login-div').fill_in 'user[email]', with: user.email
+    find('#navbar-login-div').fill_in 'user[password]', with: user.password
     click_button "Log in"
   end
 end
@@ -42,7 +42,6 @@ end
     find('#navbar-login-div').fill_in 'user[password]', with: user.password
     click_button 'Log in'
   end
-end
 
 RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
