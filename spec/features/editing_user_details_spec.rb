@@ -14,11 +14,12 @@ RSpec.feature "Timeline", type: :feature do
     visit root_path
     fill_in_signin_fields
     click_link "Edit"
-    save_and_open_page
     find("#edit-acct-info-sheet").fill_in "user[first_name]", with: "Maria"
     find("#edit-acct-info-sheet").fill_in "user[last_name]", with: "Vitamin"
     find("#edit-acct-info-sheet").fill_in 'user[current_password]', with: user.password
-    find("#edit-acct-info-sheet").click_button "Update"
+    click_button "#update"
+    save_and_open_page
+
     expect(page).to have_content("Your account has been updated successfully.")
   end
 
