@@ -15,6 +15,8 @@ class PostsController < ApplicationController
     @likes = Like.all
   end
 
+
+
   private
 
   def post_params

@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :user do
-    email { FFaker::Internet.email }
-    first_name { FFaker::Internet.name }
-    password { Devise.friendly_token.first(8) }
+    email  "email@email.com"
+    first_name "Maria"
+    password "123456"
     id 1
   end
 end
