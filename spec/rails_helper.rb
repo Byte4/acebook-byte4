@@ -37,6 +37,13 @@ module AuthHelpers
 end
 
 
+  def fill_in_signin_fields
+    find('#navbar-login-div').fill_in 'user[email]', with: user.email
+    find('#navbar-login-div').fill_in 'user[password]', with: user.password
+    click_button 'Log in'
+  end
+end
+
 RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include AuthHelpers, type: :feature

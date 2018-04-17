@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
+
   def new
     @post = Post.new
   end
@@ -10,6 +12,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.reverse
+    @likes = Like.all
   end
 
 

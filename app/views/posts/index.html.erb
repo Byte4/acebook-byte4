@@ -1,37 +1,35 @@
-<p class="navbar-text pull-right">
-  <% if user_signed_in? %>
-    Logged in as
-    <strong><%= current_user.email %></strong>.
-    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
-    |
-    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %>
-    |
-    <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
-  <% end %>
-</p>
 
 <% require 'date' %>
+  <div class="Welcome" style = "margin: 1em">
+    <strong><%="Hello, #{user_signed_in? ? current_user.first_name : "Guest"}"%></strong>
+  </div>
   <% @posts.each do |post| %>
-
     <div class="card" style="width: 50rem; margin: 5px;">
     <div class="card-header" style="padding: 0px; font-size: 0.8em;">
-      <b><%= User.find(post.user_id).first_name %> </b>
+      <b> <%= post.user.first_name %> </b>
     </div>
-
       <div class="card-body">
         <%= simple_format(post.message) %>
       </div>
       <div class="card-footer quote-footer" style="padding: 0px; font-size: 0.8em;">
-        <div class="float-left col-6">
-          <a href="#">
-            <a href="#">
-              <i class="fas fa-thumbs-up"></i>
-            </a>
-          </a>
+        <div class="float-left col-1">
+          <%= link_to post_likes_path(post), id: "like-#{post.id}", method: :post do %>
+            <i class="fas fa-thumbs-up" id ="thumbs-up-<%=post.id%>"></i>
+            <% end %>
+            <span id="likes-counter-<%=post.id%>">
+              <%= post.likes.count if post.likes.count > 0 %>
+            </span>
         </div>
-        <div class="float-right text-right col-6">
+
+        <div class="float-left col-1">
+          <%= link_to post_dislikes_path(post), id: "dislike-#{post.id}", method: :post do %>
+            <i class="fas fa-thumbs-down" id ="thumbs-down-<%=post.id%>"></i>
+            <% end %>
+            <span id="dislikes-counter-<%=post.id%>">
+              <%= post.dislikes.count if post.dislikes.count > 0 %></span>
+        </div>
+
+        <div class="float-right text-right col-10">
           <i>Posted on:
             <%= post.created_at.strftime("%d/%m/%Y at %I:%M%p") %>
           </i>
@@ -56,7 +54,6 @@
       <% end %>
     </div>
     </div>
-
   <% end %>
 
   <%= link_to new_post_path do %>
