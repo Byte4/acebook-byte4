@@ -7,8 +7,8 @@ RSpec.feature "Dislike", type: :feature do
   let!(:post) {FactoryBot.create(:post)}
 
   def fill_in_signin_fields
-    fill_in 'user[email]', with: user.email
-    fill_in 'user[password]', with: user.password
+    find('#navbar-login-div').fill_in 'user[email]', with: user.email
+    find('#navbar-login-div').fill_in 'user[password]', with: user.password
     click_button 'Log in'
   end
 
