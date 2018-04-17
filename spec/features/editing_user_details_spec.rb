@@ -18,8 +18,6 @@ RSpec.feature "Editing user details", type: :feature do
     find("#edit-acct-info-sheet").fill_in "user[last_name]", with: "Vitamin"
     find("#edit-acct-info-sheet").fill_in 'user[current_password]', with: user.password
     click_button "#update"
-    save_and_open_page
-
     expect(page).to have_content("Your account has been updated successfully.")
   end
 

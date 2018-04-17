@@ -1004,8 +1004,6 @@
         1,
         0,
         null,
-        0,
-        null,
         null,
         null
       ],
@@ -1138,6 +1136,18 @@
         1,
         1,
         null,
+        null,
+        null
+      ],
+      "/Users/iD/Projects/Makers/Week8/acebook-byte4/spec/features/user_can_see_posts_without_logging_in_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -1435,6 +1445,6 @@
         null
       ]
     },
-    "timestamp": 1523972237
+    "timestamp": 1523973997
   }
 }
