@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'date'
 
-RSpec.feature "Timeline", type: :feature do
+RSpec.feature "Editing user details", type: :feature do
 
   let(:user) {FactoryBot.create(:user)}
 
