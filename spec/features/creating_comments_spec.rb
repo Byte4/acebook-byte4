@@ -13,6 +13,6 @@ feature "Creating comments" do
     visit '/'
     fill_in "Comment", with: comment.content
     click_button "Submit"
-    expect(page).to have_css("div#comment-#{comment.id}", text: 'test comment')
+    expect(page).to have_css("div#comment-#{comment.id}", text: 'test comment')    
   end
 end
