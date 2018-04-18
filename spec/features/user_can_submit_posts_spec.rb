@@ -19,8 +19,11 @@ RSpec.feature "Timeline", type: :feature do
     fill_in_signin_fields
     click_link "New post"
     fill_in "Message", with: "Hello, world!"
-    click_button "Submit"
-    expect(page).to have_content(Time.now.localtime.strftime("%d/%m/%Y at %I:%M%p"))
+
+    Timecop.freeze(Time.local(1980)) do
+      click_button "Submit"
+      expect(page).to have_content(Time.now.localtime.strftime("%d/%m/%Y at %I:%M%p"))
+    end
   end
 
 end
