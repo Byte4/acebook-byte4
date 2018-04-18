@@ -28,20 +28,19 @@ require 'support/factory_bot'
 ActiveRecord::Migration.maintain_test_schema!
 
 module AuthHelpers
-  def sign_in_with (user)
+  def sign_in_with(user)
     visit '/'
     find('#navbar-login-div').fill_in 'user[email]', with: user.email
     find('#navbar-login-div').fill_in 'user[password]', with: user.password
     click_button "Log in"
   end
-end
 
-
-  def fill_in_signin_fields
-    find('#navbar-login-div').fill_in 'user[email]', with: user.email
-    find('#navbar-login-div').fill_in 'user[password]', with: user.password
-    click_button 'Log in'
+  def fill_in_comment_with(comment)
+    visit '/'
+    fill_in "Comment", with: comment.content
+    click_button "Submit"
   end
+end
 
 RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller

@@ -6,19 +6,21 @@ feature "Creating comments" do
   let!(:comment) {FactoryBot.create(:comment, post_id: post.id)}
 
   scenario "User wants to comment on a post"do
-    sign_in_with (user)
-    visit '/'
-    fill_in "Comment", with: comment.content
-    click_button "Submit"
+    sign_in_with(user)
+    fill_in_comment_with(comment)
     expect(page).to have_css("div#comment-#{comment.id}", text: 'test comment')
   end
 
   scenario "It displays number of comments if greater than 0"do
-    sign_in_with (user)
-    visit '/'
-    fill_in "Comment", with: comment.content
-    click_button "Submit"
+    sign_in_with(user)
+    fill_in_comment_with(comment)
     expect(page).to have_css("span#comment-count-#{post.id}", text: '2')
+  end
+
+  scenario "It displays user's first name against their comment"do
+    sign_in_with(user)
+    fill_in_comment_with(comment)
+    expect(page).to have_css("div#comment-#{comment.id}", text: "Maria: test comment")
   end
 
 

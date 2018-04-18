@@ -5,7 +5,7 @@ feature 'signing in' do
 
   scenario 'visiting the site to sign in' do
     visit unauthenticated_root_path
-    fill_in_signin_fields
+    sign_in_with(user)
     expect(page).to have_content('Signed in successfully')
   end
 

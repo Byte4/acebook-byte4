@@ -6,7 +6,7 @@ RSpec.feature "Timeline", type: :feature do
 
   scenario 'user can see their first name on top of the post' do
     visit unauthenticated_root_path
-    fill_in_signin_fields
+    sign_in_with(user)
     click_link "New post"
     fill_in "Message", with: "Hello, world!"
     click_button "Submit"
