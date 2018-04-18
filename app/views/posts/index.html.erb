@@ -6,48 +6,65 @@
   <% @posts.each do |post| %>
     <div class="card col-lg-6 col-md-8 col-sm-12" style="margin: 5px;">
     <div class="card-header" style="padding: 0px; font-size: 0.8em;">
-      <b> <%= post.user.first_name %> </b>
+      <b class="float-left col-6"> <%= post.user.first_name %> </b>
+      <span class="float-right text-right col-6">
+        <i>Posted on:
+          <%= post.created_at.strftime("%d/%m/%Y at %I:%M%p") %>
+        </i>
+      </span>
     </div>
       <div class="card-body">
         <%= simple_format(post.message) %>
       </div>
       <div class="card-footer quote-footer" style="padding: 0px; font-size: 0.8em;">
-        <div class="float-left col-1">
-          <%= link_to post_likes_path(post), id: "like-#{post.id}", method: :post do %>
-            <i class="fas fa-thumbs-up" id ="thumbs-up-<%=post.id%>"></i>
-            <% end %>
-            <span id="likes-counter-<%=post.id%>">
-              <%= post.likes.count if post.likes.count > 0 %>
+        <div class="col-6">
+          <div class="float-left col-3">
+            <%= link_to post_likes_path(post), id: "like-#{post.id}", method: :post do %>
+              <i class="fas fa-thumbs-up" id ="thumbs-up-<%=post.id%>"></i>
+              <% end %>
+              <span id="likes-counter-<%=post.id%>">
+                <%= post.likes.count if post.likes.count > 0 %>
+              </span>
+          </div>
+
+          <div class="float-left col-3">
+            <%= link_to post_dislikes_path(post), id: "dislike-#{post.id}", method: :post do %>
+              <i class="fas fa-thumbs-down" id ="thumbs-down-<%=post.id%>"></i>
+              <% end %>
+              <span id="dislikes-counter-<%=post.id%>">
+                <%= post.dislikes.count if post.dislikes.count > 0 %></span>
+          </div>
+        </div>
+
+
+
+        <!-- comments link div -->
+        <div class="float-right col-6 text-center">
+            <span data-toggle="collapse" data-target="#all-comments-<%=post.id%>">Comment</span>
+            <span id= '<%="comment-count-#{post.id}"%>'>
+              <%= "(#{post.comments.count})" if post.comments.count > 0 %>
             </span>
         </div>
-
-        <div class="float-left col-1">
-          <%= link_to post_dislikes_path(post), id: "dislike-#{post.id}", method: :post do %>
-            <i class="fas fa-thumbs-down" id ="thumbs-down-<%=post.id%>"></i>
-            <% end %>
-            <span id="dislikes-counter-<%=post.id%>">
-              <%= post.dislikes.count if post.dislikes.count > 0 %></span>
-        </div>
-
-        <div class="float-right text-right col-10">
-          <i>Posted on:
-            <%= post.created_at.strftime("%d/%m/%Y at %I:%M%p") %>
-          </i>
-        </div>
       </div>
-      <div>
+
+      <!-- footer div ends here  -->
+      <!-- all comments div -->
+      <div id="all-comments-<%=post.id%>" class="collapse">
+        <div>
         <% if post.comments %>
           <% post.comments.each do |comment| %>
-            <div id='<%="comment-#{comment.id}"%>'>
+            <div id='<%="comment-#{comment.id}"%>' class="mx-auto col-11 border rounded">
               <span class="float-left"><%= comment.content %></span>
-              <span class="float-right"><% if comment.user == current_user %>
-               <%= link_to "Delete", post_comment_path(post, comment), method: :delete %></span>
-              <% end %>
+              <span class="float-right">
+                <% if comment.user == current_user %>
+                  <%= link_to "Delete", post_comment_path(post, comment), class: "badge badge-primary", method: :delete %>
+                <% end %>
+              </span><br/>
             </div>
           <% end %>
         <% end %>
       </div>
-    <div>
+      <!-- all comments div -->
       <div class="float-right">
         <%= form_for [post, post.comments.new] do |f| %>
         <%= f.text_field :content, placeholder: 'Comment', required: true %>
