@@ -12,4 +12,14 @@ feature "Creating comments" do
     click_button "Submit"
     expect(page).to have_css("div#comment-#{comment.id}", text: 'test comment')
   end
+
+  scenario "It displays number of comments if greater than 0"do
+    sign_in_with (user)
+    visit '/'
+    fill_in "Comment", with: comment.content
+    click_button "Submit"
+    expect(page).to have_css("span#comment-count-#{post.id}", text: '2')
+  end
+
+
 end
