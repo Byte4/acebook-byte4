@@ -7,10 +7,8 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
 
     if @comment.save
-      flash[:success] = "You commented the hell out of that post!"
       redirect_to authenticate_root_path
     else
-      flash[:alert] = "Check the comment form, something went horribly wrong."
       render authenticate_root_path
     end
   end
@@ -19,7 +17,6 @@ class CommentsController < ApplicationController
     @comment = @post.comments.find(params[:id])
 
     @comment.destroy
-    flash[:success] = "Comment deleted"
     redirect_to authenticate_root_path
   end
 
