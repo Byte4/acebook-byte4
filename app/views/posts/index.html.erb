@@ -65,10 +65,10 @@
         <% end %>
       </div>
       <!-- all comments div -->
-      <div class="float-right">
+      <div class="mx-auto col-6">
         <%= form_for [post, post.comments.new] do |f| %>
-        <%= f.text_field :content, placeholder: 'Comment', required: true %>
-        <%= f.submit 'Submit' %>
+        <%= f.text_field :content, placeholder: 'Comment', required: true, class: "rounded" %>
+        <%= f.submit 'Submit', class: "btn btn-secondary btn-xs" %>
         <% end %>
       </div>
     </div>
