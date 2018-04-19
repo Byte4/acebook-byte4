@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
-  before_action :set_post, only: [:edit, :show, :update, :destroy]
-
+  before_action :set_post, only: %i[edit show update destroy]
 
   def new
     @post = Post.new
@@ -17,29 +16,27 @@ class PostsController < ApplicationController
     @likes = Like.all
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @post.user == current_user
-      flash[:success] = "Post updated."
+
       @post.update(post_params)
+      flash[:notice] = 'Post updated'
       redirect_to posts_path
     else
-      flash[:notice] = 'You cannot edit this post'
+      flash[:alert] = 'You cannot edit this post'
       render :edit
     end
   end
 
   def destroy
     if @post.user == current_user
-      flash[:success] = "Post deleted."
       @post.destroy
+      flash[:notice] = 'Your post has been successfully deleted'
       redirect_to posts_path
     end
   end
-
-
 
   private
 

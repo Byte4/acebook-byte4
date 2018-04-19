@@ -36,8 +36,6 @@
           </div>
         </div>
 
-
-
         <!-- comments link div -->
         <div class="float-right col-6 text-center">
             <span data-toggle="collapse" data-target="#all-comments-<%=post.id%>">Comment</span>
@@ -91,7 +89,4 @@
     </div>
     </div>
   <% end %>
-
-  <%= link_to new_post_path do %>
-  New post
-<% end %>
+  <%= link_to "New post", new_post_path %>
