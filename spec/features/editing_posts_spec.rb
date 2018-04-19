@@ -7,8 +7,7 @@ feature 'editing posts' do
 
     sign_in_with user
 
-
-    click_link 'Edit Post'
+    click_link 'Edit'
   end
 
   scenario 'user can edit a post' do

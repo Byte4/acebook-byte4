@@ -40,10 +40,10 @@
         null,
         1,
         1,
-        14,
-        14,
-        14,
-        14,
+        15,
+        15,
+        15,
+        15,
         null,
         null,
         1,
@@ -646,7 +646,7 @@
         null,
         null,
         null,
-        15,
+        17,
         null,
         null
       ],
@@ -1042,8 +1042,8 @@
         null,
         null,
         1,
-        35,
-        35,
+        37,
+        37,
         null,
         null,
         1,
@@ -1057,6 +1057,14 @@
         null,
         0,
         0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         null,
@@ -1069,7 +1077,7 @@
         null,
         null,
         1,
-        2,
+        3,
         null,
         null
       ],
@@ -1131,6 +1139,25 @@
         null,
         null
       ],
+      "/Users/antcin/Desktop/gitDir/acebook-byte4/spec/features/deleting_post_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/antcin/Desktop/gitDir/acebook-byte4/spec/features/editing_posts_spec.rb": [
         1,
         null,
@@ -1140,7 +1167,6 @@
         1,
         null,
         1,
-        null,
         null,
         1,
         null,
@@ -1659,6 +1685,6 @@
         null
       ]
     },
-    "timestamp": 1524095830
+    "timestamp": 1524128203
   }
 }

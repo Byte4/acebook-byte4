@@ -14,14 +14,14 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-04-19T00:57:10+01:00">2018-04-19T00:57:10+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-04-19T09:56:43+01:00">2018-04-19T09:56:43+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.35%</span></span>
+    (<span class="covered_percent"><span class="green">98.4%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
@@ -31,9 +31,9 @@
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>63</b> files in total.
-    <b>423</b> relevant lines. 
-    <span class="green"><b>416</b> lines covered</span> and
+    <b>64</b> files in total.
+    <b>438</b> relevant lines. 
+    <span class="green"><b>431</b> lines covered</span> and
     <span class="red"><b>7</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -92,12 +92,12 @@
       
       <tr>
         <td class="strong"><a href="#08f44367bb4222e149b7fd57d2ccd8661eff1bdc" class="src_link" title="app/controllers/posts_controller.rb">app/controllers/posts_controller.rb</a></td>
-        <td class="green strong">91.67 %</td>
-        <td>45</td>
-        <td>24</td>
-        <td>22</td>
+        <td class="green strong">93.1 %</td>
+        <td>53</td>
+        <td>29</td>
+        <td>27</td>
         <td>2</td>
-        <td>4.5</td>
+        <td>4.0</td>
       </tr>
       
       <tr>
@@ -127,7 +127,7 @@
         <td>9</td>
         <td>8</td>
         <td>1</td>
-        <td>2.6</td>
+        <td>2.8</td>
       </tr>
       
       <tr>
@@ -471,9 +471,19 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#bea9e3c131a9eca94aeb47e312c22de76142ec7f" class="src_link" title="spec/features/deleting_post_spec.rb">spec/features/deleting_post_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>17</td>
+        <td>10</td>
+        <td>10</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#3f1f6e7af16d53e4bf1a7eae953b9db2411cc514" class="src_link" title="spec/features/editing_posts_spec.rb">spec/features/editing_posts_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>22</td>
+        <td>21</td>
         <td>13</td>
         <td>13</td>
         <td>0</td>
@@ -647,7 +657,7 @@
         <td>25</td>
         <td>25</td>
         <td>0</td>
-        <td>3.3</td>
+        <td>3.5</td>
       </tr>
       
       <tr>
@@ -1207,10 +1217,10 @@
         <div class="source_table" id="08f44367bb4222e149b7fd57d2ccd8661eff1bdc">
   <div class="header">
     <h3>app/controllers/posts_controller.rb</h3>
-    <h4><span class="green">91.67 %</span> covered</h4>
+    <h4><span class="green">93.1 %</span> covered</h4>
     <div>
-      <b>24</b> relevant lines. 
-      <span class="green"><b>22</b> lines covered</span> and
+      <b>29</b> relevant lines. 
+      <span class="green"><b>27</b> lines covered</span> and
       <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
@@ -1308,14 +1318,14 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="35" data-linenumber="16">
-          <span class="hits">35</span>
+        <li class="covered" data-hits="37" data-linenumber="16">
+          <span class="hits">37</span>
           
           <code class="ruby">    @posts = Post.all.reverse</code>
         </li>
       
-        <li class="covered" data-hits="35" data-linenumber="17">
-          <span class="hits">35</span>
+        <li class="covered" data-hits="37" data-linenumber="17">
+          <span class="hits">37</span>
           
           <code class="ruby">    @likes = Like.all</code>
         </li>
@@ -1416,40 +1426,40 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    if @post.user == current_user</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
-          <code class="ruby">  private</code>
+          <code class="ruby">      flash[:success] = &quot;Post deleted.&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">      @post.destroy</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="38">
           <span class="hits">1</span>
           
-          <code class="ruby">  def post_params</code>
+          <code class="ruby">      redirect_to posts_path</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="39">
-          <span class="hits">6</span>
+        <li class="never" data-hits="" data-linenumber="39">
           
-          <code class="ruby">    params.require(:post).permit(:message, :created_at)</code>
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="40">
@@ -1464,25 +1474,73 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="42">
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="44">
           <span class="hits">1</span>
           
-          <code class="ruby">  def set_post</code>
+          <code class="ruby">  private</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="43">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="45">
           
-          <code class="ruby">    @post = Post.find(params[:id])</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def post_params</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="47">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    params.require(:post).permit(:message, :created_at)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def set_post</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="51">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    @post = Post.find(params[:id])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
           
           
           <code class="ruby">end</code>
@@ -2205,8 +2263,8 @@
           <code class="ruby">      notice: &#39;alert-info&#39;</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="19">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="17" data-linenumber="19">
+          <span class="hits">17</span>
           
           <code class="ruby">    }[flash_type.to_sym] || flash_type.to_s</code>
         </li>
@@ -8226,6 +8284,127 @@
 </div>
 
       
+        <div class="source_table" id="bea9e3c131a9eca94aeb47e312c22de76142ec7f">
+  <div class="header">
+    <h3>spec/features/deleting_post_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">feature &#39;Deleting posts&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  background do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    user = create :user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    post = create(:post, message: &#39;Delete post test&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    sign_in_with user</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  scenario &#39;user can delete a post&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;Delete Post&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content(&#39;Post deleted.&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to_not have_content(&#39;Delete post test&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="3f1f6e7af16d53e4bf1a7eae953b9db2411cc514">
   <div class="header">
     <h3>spec/features/editing_posts_spec.rb</h3>
@@ -8294,79 +8473,73 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
           <code class="ruby">    click_link &#39;Edit Post&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">  scenario &#39;user can edit a post&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
           <code class="ruby">    fill_in &#39;Message&#39;, with: &#39;replacing test post&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
           <code class="ruby">    click_button &#39;Update post&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">    save_and_open_page</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
           <code class="ruby">    expect(page).to have_content(&#39;Post updated&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
           <code class="ruby">    expect(page).to have_content(&#39;replacing test post&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">end</code>
@@ -10255,26 +10428,26 @@
           <code class="ruby">  def sign_in_with(user)</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="32">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="15" data-linenumber="32">
+          <span class="hits">15</span>
           
           <code class="ruby">    visit &#39;/&#39;</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="33">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="15" data-linenumber="33">
+          <span class="hits">15</span>
           
           <code class="ruby">    find(&#39;#navbar-login-div&#39;).fill_in &#39;user[email]&#39;, with: user.email</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="34">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="15" data-linenumber="34">
+          <span class="hits">15</span>
           
           <code class="ruby">    find(&#39;#navbar-login-div&#39;).fill_in &#39;user[password]&#39;, with: user.password</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="35">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="15" data-linenumber="35">
+          <span class="hits">15</span>
           
           <code class="ruby">    click_button &quot;Log in&quot;</code>
         </li>

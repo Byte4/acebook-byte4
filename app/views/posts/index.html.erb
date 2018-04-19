@@ -48,11 +48,20 @@
 
       <!-- edit post link div -->
 
-      <div class="float-right col-10 text-center">
+      <div class="float-right col-9 text-center">
         <% if post.user == current_user %>
-        <%= link_to "Edit Post", edit_post_path(post) %>
+        <%= link_to "Edit", edit_post_path(post) %>
         <% end %>
       </div>
+
+      <!-- delete post link div -->
+
+      <div class="float-right col-9 text-center">
+        <% if post.user == current_user %>
+        <%= link_to "Delete", post_path(post), method: :delete, data: { confirm: 'Do you really want to delete this post?'} %>
+        <% end %>
+      </div>
+    </div>
     </div>
 
       <!-- footer div ends here  -->

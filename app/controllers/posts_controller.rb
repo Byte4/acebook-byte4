@@ -31,6 +31,14 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    if @post.user == current_user
+      flash[:success] = "Post deleted."
+      @post.destroy
+      redirect_to posts_path
+    end
+  end
+
 
 
   private
