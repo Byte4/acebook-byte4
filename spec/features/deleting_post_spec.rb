@@ -10,7 +10,6 @@ feature 'Deleting posts' do
 
   scenario 'user can delete a post' do
     click_link 'Delete'
-
     expect(page).to have_content('Your post has been successfully deleted.')
     expect(page).to_not have_content('Delete post test')
   end
