@@ -15,7 +15,7 @@ feature 'editing posts' do
 
     click_button 'Update post'
     save_and_open_page
-    expect(page).to have_content('Post updated')
+    expect(page).to have_content('Post updated.')
     expect(page).to have_content('replacing test post')
   end
 end

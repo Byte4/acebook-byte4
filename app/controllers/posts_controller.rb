@@ -22,10 +22,10 @@ class PostsController < ApplicationController
     if @post.user == current_user
 
       @post.update(post_params)
-      flash[:notice] = 'Post updated'
+      flash[:notice] = 'Post updated.'
       redirect_to posts_path
     else
-      flash[:alert] = 'You cannot edit this post'
+      flash[:alert] = 'You cannot edit this post.'
       render :edit
     end
   end
@@ -33,7 +33,7 @@ class PostsController < ApplicationController
   def destroy
     if @post.user == current_user
       @post.destroy
-      flash[:notice] = 'Your post has been successfully deleted'
+      flash[:notice] = 'Your post has been successfully deleted.'
       redirect_to posts_path
     end
   end
