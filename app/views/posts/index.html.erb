@@ -44,8 +44,16 @@
             <span id= '<%="comment-count-#{post.id}"%>'>
               <%= "(#{post.comments.count})" if post.comments.count > 0 %>
             </span>
-        </div>
       </div>
+
+      <!-- edit post link div -->
+
+      <div class="float-right col-10 text-center">
+        <% if post.user == current_user %>
+        <%= link_to "Edit Post", edit_post_path(post) %>
+        <% end %>
+      </div>
+    </div>
 
       <!-- footer div ends here  -->
       <!-- all comments div -->
