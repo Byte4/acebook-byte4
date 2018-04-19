@@ -72,7 +72,7 @@
           <% post.comments.each do |comment| %>
             <div id='<%="comment-#{comment.id}"%>' class="mx-auto col-11 border rounded">
               <span class="float-left" style="padding: 0px; font-size: 0.8em;">
-                <a href="/users/<%=post.user.id%>">
+                <a href="/users/<%=comment.user.id%>">
                   <strong><%= comment.user.first_name %>: </strong>
                 </a>
                 <%= comment.content %></span>
