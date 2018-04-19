@@ -36,16 +36,31 @@
           </div>
         </div>
 
-
-
         <!-- comments link div -->
         <div class="float-right col-6 text-center">
             <span data-toggle="collapse" data-target="#all-comments-<%=post.id%>">Comment</span>
             <span id= '<%="comment-count-#{post.id}"%>'>
               <%= "(#{post.comments.count})" if post.comments.count > 0 %>
             </span>
-        </div>
       </div>
+
+      <!-- edit post link div -->
+
+      <div class="float-right col-9 text-center">
+        <% if post.user == current_user %>
+        <%= link_to "Edit", edit_post_path(post) %>
+        <% end %>
+      </div>
+
+      <!-- delete post link div -->
+
+      <div class="float-right col-9 text-center">
+        <% if post.user == current_user %>
+        <%= link_to "Delete", post_path(post), method: :delete, data: { confirm: 'Do you really want to delete this post?'} %>
+        <% end %>
+      </div>
+    </div>
+    </div>
 
       <!-- footer div ends here  -->
       <!-- all comments div -->
@@ -74,7 +89,4 @@
     </div>
     </div>
   <% end %>
-
-  <%= link_to new_post_path do %>
-  New post
-<% end %>
+  <%= link_to "New post", new_post_path %>
