@@ -5,7 +5,8 @@
     <h5 class="card-title">
       <%= "#{@user.first_name } #{@user.last_name}"%>
     </h5>
-    <p class="card-text"><%= @user.about_me %></p>
+    <p class="card-text"><%= simple_format(@user.about_me) %></p>
+
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">
