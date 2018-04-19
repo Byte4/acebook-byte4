@@ -1,0 +1,2 @@
+$('#all-comments-<%= @post.id %>').html("<%= j render @post.comments, post: @post, comment: @comment %>")
+$("#comment-count-<%= @post.id %>").text("(<%=j @post.comments.count.to_s %>)")
