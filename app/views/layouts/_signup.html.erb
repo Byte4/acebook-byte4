@@ -12,6 +12,10 @@
     <div class="field">
       <%= f.text_field :last_name, autocomplete: "last_name", required: true, class: "form-control"  %>
     </div>
+    <h5 class="card-title">About Me</h5>
+    <div class="field">
+      <%= f.text_area :about_me, autocomplete: "about_me", required: true, class: "form-control"  %>
+    </div>
     <h5 class="card-title text-muted">Email</h5>
     <div class="field">
       <%= f.email_field :email, autocomplete: "email", required: true, class: "form-control" %>
