@@ -7,7 +7,10 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
 
     if @comment.save
-      redirect_to authenticate_root_path
+      respond_to do |format|
+        format.html { redirect_to authenticate_root_path }
+        format.js
+      end
     else
       render authenticate_root_path
     end

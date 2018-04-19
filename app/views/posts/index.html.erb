@@ -40,7 +40,7 @@
 
         <!-- comments link div -->
         <div class="float-right col-6 text-center">
-            <span data-toggle="collapse" data-target="#all-comments-<%=post.id%>">Comment</span>
+            <span data-toggle="collapse" data-target="#comments-footer-<%=post.id%>">Comment</span>
             <span id= '<%="comment-count-#{post.id}"%>'>
               <%= "(#{post.comments.count})" if post.comments.count > 0 %>
             </span>
@@ -49,29 +49,21 @@
 
       <!-- footer div ends here  -->
       <!-- all comments div -->
-      <div id="all-comments-<%=post.id%>" class="collapse">
-        <div>
-        <% if post.comments %>
-          <% post.comments.each do |comment| %>
-            <div id='<%="comment-#{comment.id}"%>' class="mx-auto col-11 border rounded">
-              <span class="float-left" style="padding: 0px; font-size: 0.8em;"> <strong><%= comment.user.first_name %>: </strong><%= comment.content %></span>
-              <span class="float-right">
-                <% if comment.user == current_user %>
-                  <%= link_to "Delete", post_comment_path(post, comment), class: "badge badge-primary", method: :delete %>
-                <% end %>
-              </span><br/>
-            </div>
+      <div class="collapse" id="comments-footer-<%=post.id%>" class="collapse">
+        <div id="all-comments-<%=post.id%>">
+          <% if post.comments %>
+          <%= render post.comments, post: post %>
           <% end %>
-        <% end %>
+        <!-- all comments div -->
+        </div>
+        <div class="mx-auto col-6">
+          <%= form_for([post, post.comments.new], remote: true) do |f| %>
+          <%= f.text_field :content, placeholder: 'Comment', required: true, class: "rounded", id: "comment_content_#{post.id}" %>
+          <%= f.submit 'Submit', class: "btn btn-secondary btn-xs" %>
+          <% end %>
+        </div>
       </div>
-      <!-- all comments div -->
-      <div class="mx-auto col-6">
-        <%= form_for [post, post.comments.new] do |f| %>
-        <%= f.text_field :content, placeholder: 'Comment', required: true, class: "rounded" %>
-        <%= f.submit 'Submit', class: "btn btn-secondary btn-xs" %>
-        <% end %>
-      </div>
-    </div>
+
     </div>
   <% end %>
 

@@ -1,0 +1,10 @@
+<div>
+    <div id='<%="comment-#{comment.id}"%>' class="mx-auto col-11 border rounded">
+      <span class="float-left" style="padding: 0px; font-size: 0.8em;"> <strong><%= comment.user.first_name %>: </strong><%= comment.content %></span>
+      <span class="float-right">
+        <% if comment.user == current_user %>
+          <%= link_to "Delete", post_comment_path(post, comment), class: "badge badge-primary", method: :delete %>
+        <% end %>
+      </span><br/>
+    </div>
+</div>
