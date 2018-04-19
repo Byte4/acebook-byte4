@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+# Chat::Engine.routes.draw do
+#   resources :conversations, only: %i(show create) do
+#     resources :messages, only: %i(create destroy)
+#   end
+# end
+
+  mount Chat::Engine => "/chat", as: "chat"
+
+
   resources :dislikes
   resources :likes
   devise_for :users, controllers: {
@@ -23,5 +32,6 @@ Rails.application.routes.draw do
     resources :likes
     resources :dislikes
   end
+
 
 end

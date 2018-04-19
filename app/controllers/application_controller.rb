@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  helper Chat::Engine.helpers
   protect_from_forgery with: :exception
   before_action :authenticate_user!
 
