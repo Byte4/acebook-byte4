@@ -1,0 +1,15 @@
+<div class="card mx-auto" style="width: 30rem; margin-top: 5rem">
+  <!-- div below will host the picture -->
+  <img class="card-img-top" src="http://i0.kym-cdn.com/entries/icons/original/000/023/977/VectorFlightSuit.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">
+      <%= "#{@user.first_name } #{@user.last_name}"%>
+    </h5>
+    <p class="card-text"><%= @user.about_me %></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <strong>Email: </strong><%= @user.email %>
+    </li>
+  </ul>
+</div>

@@ -3,8 +3,11 @@ Rails.application.routes.draw do
   resources :likes
   devise_for :users, controllers: {
         sessions: 'users/sessions',
-        :registrations => "users/registrations"
+        :registrations => "users/registrations",
       }
+  resources :users, only: [:show]
+
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
@@ -23,5 +26,6 @@ Rails.application.routes.draw do
     resources :likes
     resources :dislikes
   end
+
 
 end
