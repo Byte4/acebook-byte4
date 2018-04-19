@@ -42,13 +42,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :avatar])
     # devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
   end
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_account_update_params
-    devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :avatar])
     # devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
   end
 
@@ -61,5 +61,18 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+
+  # def create
+  #   @user = User.create(user_params)
+  # end
+
+# private
+
+# Use strong_parameters for attribute whitelisting
+# Be sure to update your create() and update() controller methods.
+
+# def user_params
+#   params.require(:user).permit(:avatar)
+# end
 
 end
