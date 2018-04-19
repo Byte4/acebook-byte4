@@ -1,5 +1,5 @@
-
 <% require 'date' %>
+
   <div class="Welcome" style = "margin: 1em">
     <strong><%="Hello, #{user_signed_in? ? current_user.first_name : "Guest"}"%></strong>
   </div>
@@ -19,14 +19,10 @@
       <div class="card-footer quote-footer" style="padding: 0px; font-size: 0.8em;">
         <div class="col-6">
 
-          <div class="float-left col-3">
-            <%= link_to post_likes_path(post), id: "like-#{post.id}", method: :post do %>
-              <i class="fas fa-thumbs-up" id ="thumbs-up-<%=post.id%>"></i>
-              <% end %>
-              <span id="likes-counter-<%=post.id%>">
-                <%= post.likes.count if post.likes.count > 0 %>
-              </span>
-          </div>
+
+          <%= render post.likes, post: post %>
+
+
 
           <div class="float-left col-3">
             <%= link_to post_dislikes_path(post), id: "dislike-#{post.id}", method: :post do %>

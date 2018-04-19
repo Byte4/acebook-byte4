@@ -1,1 +1,2 @@
-$("#likes-counter-<%=@post.id%>").show()
+
+$("#likes-counter-<%= @post.id %>").text("(<%=j @post.likes.counter.to_s %>)")

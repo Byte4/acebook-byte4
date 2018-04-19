@@ -40,6 +40,7 @@ group :development, :test do
   gem 'simplecov', require: false, group: :test
   gem "factory_bot_rails", "~> 4.0"
   gem 'ffaker'
+  gem 'pry'
 end
 
 group :development do
