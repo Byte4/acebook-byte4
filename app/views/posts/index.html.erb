@@ -7,8 +7,10 @@
     <div class="card col-lg-6 col-md-8 col-sm-12" style="margin: 5px;">
     <div class="card-header" style="padding: 0px; font-size: 0.8em;">
       <b class="float-left col-6">
-        <%= image_tag post.user.avatar.url(:thumb), class: "rounded" %>
-        <%= post.user.first_name %>
+        <a href="/users/<%=post.user.id%>" id="profile-<%=post.user.id%>">
+          <%= image_tag post.user.avatar.url(:thumb), class: "rounded" %>
+            <%= post.user.first_name %>
+        </a>
       </b>
       <span class="float-right text-right col-6">
         <i>Posted on:
@@ -39,16 +41,31 @@
           </div>
         </div>
 
-
-
         <!-- comments link div -->
         <div class="float-right col-6 text-center">
             <span data-toggle="collapse" data-target="#all-comments-<%=post.id%>">Comment</span>
             <span id= '<%="comment-count-#{post.id}"%>'>
               <%= "(#{post.comments.count})" if post.comments.count > 0 %>
             </span>
-        </div>
       </div>
+
+      <!-- edit post link div -->
+
+      <div class="float-right col-9 text-center">
+        <% if post.user == current_user %>
+        <%= link_to "Edit", edit_post_path(post) %>
+        <% end %>
+      </div>
+
+      <!-- delete post link div -->
+
+      <div class="float-right col-9 text-center">
+        <% if post.user == current_user %>
+        <%= link_to "Delete", post_path(post), method: :delete, data: { confirm: 'Do you really want to delete this post?'} %>
+        <% end %>
+      </div>
+    </div>
+    </div>
 
       <!-- footer div ends here  -->
       <!-- all comments div -->
@@ -57,8 +74,12 @@
         <% if post.comments %>
           <% post.comments.each do |comment| %>
           <div id='<%="comment-#{comment.id}"%>' class="mx-auto col-11 rounded card-footer" style="font-size: 0.8em">
+            <a href="/users/<%=comment.user.id%>">
                <%= image_tag comment.user.avatar.url(:comments_thumb), class: "rounded-circle" %>
-               <strong><%= comment.user.first_name %>: </strong><%= comment.content %>
+               <strong><%= comment.user.first_name %>:     
+              </strong>
+           </a>   
+              <%= comment.content %>
                <span class="float-right">
                  <% if comment.user == current_user %>
                    <%= link_to "Delete", post_comment_path(post, comment), class: "badge badge-primary", method: :delete %>
@@ -66,7 +87,7 @@
                </span>
           </div>
           <% end %>
-          <% end %>
+        <% end %>
       </div>
 
 
@@ -81,7 +102,4 @@
     </div>
     </div>
   <% end %>
-
-  <%= link_to new_post_path do %>
-  New post
-<% end %>
+  <%= link_to "New post", new_post_path %>

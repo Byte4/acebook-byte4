@@ -15,6 +15,9 @@
     <h5 class="card-title">Profile picture</h5>
     <div class="field">
       <%= f.file_field :avatar %>
+    <h5 class="card-title">About Me</h5>
+    <div class="field">
+      <%= f.text_area :about_me, autocomplete: "about_me", required: true, class: "form-control"  %>
     </div>
     <h5 class="card-title text-muted">Email</h5>
     <div class="field">

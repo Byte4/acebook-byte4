@@ -13,12 +13,14 @@
       <div class="field">
         <%= f.text_field :last_name, autocomplete: "last_name", required: true, class: "form-control"  %>
       </div>
-
       <h5 class="card-title">Profile picture</h5>
       <div class="field">
         <%= f.file_field :avatar %>
       </div>
-
+      <h5 class="card-title">About Me</h5>
+      <div class="field">
+        <%= f.text_area :about_me, autocomplete: "about_me", required: true, class: "form-control"  %>
+      </div>
       <h5 class="card-title">Email</h5>
       <div class="field">
         <%= f.email_field :email, autofocus: true, autocomplete: "email", required: true, class: "form-control"  %>
@@ -49,10 +51,7 @@
         <%= f.submit "Update", id: "update", class: "btn btn-primary float-right" %>
       </div>
       <% end %>
-
-
      </div>
-
     </div>
   </div>
 
