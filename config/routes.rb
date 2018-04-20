@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
-# Chat::Engine.routes.draw do
-#   resources :conversations, only: %i(show create) do
-#     resources :messages, only: %i(create destroy)
-#   end
-# end
+
+  get 'pages/info'
 
   mount Chat::Engine => "/chat", as: "chat"
 
 
   resources :dislikes
   resources :likes
+
   devise_for :users, controllers: {
         sessions: 'users/sessions',
         :registrations => "users/registrations"
@@ -27,6 +25,7 @@ Rails.application.routes.draw do
       root 'devise/sessions#new', as: :unauthenticated_root
     end
   end
+
   resources :posts do
     resources :comments
     resources :likes

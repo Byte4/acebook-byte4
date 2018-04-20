@@ -9,7 +9,7 @@ Chat.setup do |config|
   # Devise    => :authenticate_user!
   config.logged_in_check = :require_login
 
-  config.user_avatar = :image
+  # config.user_avatar = :image
 
   config.perform_method = :perform_now
 end

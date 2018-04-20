@@ -55,3 +55,18 @@ gem 'timecop'
 
 # Chat gem:
 gem 'chat'
+
+gem 'redis'
+gem 'haml'
+
+gem 'coffee-rails'
+gem 'giphy'
+gem 'jquery-fileupload-rails'
+gem 'jquery-rails'
+gem 'material_icons'
+gem 'paperclip'
+gem 'sidekiq'
+gem 'clearance'
+gem 'faker'
+gem 'pry-rails'
+gem 'turbolinks'
