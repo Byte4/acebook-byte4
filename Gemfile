@@ -40,7 +40,6 @@ group :development, :test do
   gem 'simplecov', require: false, group: :test
   gem "factory_bot_rails", "~> 4.0"
   gem 'ffaker'
-  gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 end
 
 group :development do
@@ -53,3 +52,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'timecop'
+gem 'paperclip'
