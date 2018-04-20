@@ -40,6 +40,7 @@ group :development, :test do
   gem 'simplecov', require: false, group: :test
   gem "factory_bot_rails", "~> 4.0"
   gem 'ffaker'
+  gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 end
 
 group :development do

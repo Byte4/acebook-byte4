@@ -6,5 +6,6 @@ FactoryBot.define do
     password "123456"
     about_me "About me"
     id 1
+    avatar Rack::Test::UploadedFile.new(Rails.root + 'spec/images/avatar.jpg', 'image/jpg')
   end
 end
