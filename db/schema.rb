@@ -15,6 +15,36 @@ ActiveRecord::Schema.define(version: 20180419203822) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "chat_conversations", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "chat_messages", force: :cascade do |t|
+    t.bigint "user_id"
+    t.text "text"
+    t.bigint "conversation_id"
+    t.bigint "session_id"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["conversation_id"], name: "index_chat_messages_on_conversation_id"
+    t.index ["session_id"], name: "index_chat_messages_on_session_id"
+    t.index ["user_id"], name: "index_chat_messages_on_user_id"
+  end
+
+  create_table "chat_sessions", force: :cascade do |t|
+    t.bigint "conversation_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["conversation_id"], name: "index_chat_sessions_on_conversation_id"
+    t.index ["user_id"], name: "index_chat_sessions_on_user_id"
+  end
+
   create_table "comments", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "post_id"
@@ -64,6 +94,7 @@ ActiveRecord::Schema.define(version: 20180419203822) do
     t.datetime "confirmation_sent_at"
     t.string "first_name"
     t.string "last_name"
+    t.string "chat_status", default: "offline"
     t.string "about_me"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
