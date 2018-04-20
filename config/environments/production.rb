@@ -88,5 +88,6 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  config.gem 'paperclip'
   Paperclip.options[:command_path] = "/usr/local/bin/"
 end
