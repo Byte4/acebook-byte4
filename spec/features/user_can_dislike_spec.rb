@@ -11,8 +11,6 @@ RSpec.feature "Dislike", type: :feature do
     sign_in_with(user)
     find("#dislike-#{post.id}").click
     expect(page).to have_css("span#dislikes-counter-#{post.id}", text: '1')
-
-    # expect("#dislikes-counter-#{post.id}").to have_content("1")
   end
 
   scenario 'clicking twice on dislike will undo the dislike' do
@@ -21,8 +19,6 @@ RSpec.feature "Dislike", type: :feature do
     find("#dislike-#{post.id}").click
     find("#dislike-#{post.id}").click
     expect(page).not_to have_css("span#dislikes-counter-#{post.id}", text: '1')
-
-    # expect("#dislikes-counter-#{post.id}").not_to have_content("1")
   end
 
 end
