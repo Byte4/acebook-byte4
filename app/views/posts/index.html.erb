@@ -49,7 +49,7 @@
 
     <!-- comments link div -->
     <div class="float-right col-6 text-center">
-      <span data-toggle="collapse" data-target="#all-comments-<%=post.id%>">Comment</span>
+      <span data-toggle="collapse" data-target="#comments-footer-<%=post.id%>">Comment</span>
       <span id='<%="comment-count-#{post.id}"%>'>
         <%= "(#{post.comments.count})" if post.comments.count > 0 %>
       </span>
@@ -71,34 +71,28 @@
   </div>
 
   <!-- footer div ends here -->
-  <!-- all comments div -->
-  <div id="all-comments-<%=post.id%>" class="collapse card-footer ind-comment">
-    <% if post.comments %>
-      <% post.comments.each do |comment| %>
-        <div id='<%="comment-#{comment.id}"%>' class="mx-auto col-11 rounded card-footer comment-footer">
-          <a href="/users/<%=comment.user.id%>">
-            <%= image_tag comment.user.avatar.url(:comments_thumb), class: "rounded-circle" %>
-            <strong><%= comment.user.first_name %>:
-            </strong>
-          </a>
-          <%= comment.content %>
-          <span class="float-right">
-            <% if comment.user == current_user %>
-              <%= link_to "Delete", post_comment_path(post, comment), class: "badge badge-primary", method: :delete %>
-            <% end %>
-          </span>
-        </div>
-      <% end %>
-    <% end %>
+  <div id="comments-footer-<%=post.id%>" class="collapse">
 
-    <!-- Post Comment Form -->
+    <div id="all-comments-<%=post.id%>" class="card-footer ind-comment">
+      <% if post.comments %>
+        <%= render post.comments, post: post %>
+      <% end %>
+    </div>
+
     <div class="mx-auto col-6">
-      <%= form_for [post, post.comments.new] do |f| %>
-      <%= f.text_field :content, placeholder: 'Comment', required: true, class: "rounded" %>
+      <%= form_for([post, post.comments.new], remote: true) do |f| %>
+      <%= f.text_field :content, placeholder: 'Comment', required: true, class: "rounded", id: "comment_content_#{post.id}" %>
       <%= f.submit 'Submit', class: "btn btn-secondary btn-xs" %>
     <% end %>
     </div>
+
   </div>
+  <!-- all comments div -->
+
+
+
+
+
 </div>
 <% end %>
 <%= link_to "New post", new_post_path %>

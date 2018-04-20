@@ -5,8 +5,12 @@ class CommentsController < ApplicationController
   def create
     @comment = @post.comments.build(comment_params)
     @comment.user_id = current_user.id
+
     if @comment.save
-      redirect_to authenticate_root_path
+      respond_to do |format|
+        format.html { redirect_to authenticate_root_path }
+        format.js
+      end
     else
       render authenticate_root_path
     end
@@ -14,8 +18,14 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment = @post.comments.find(params[:id])
-    @comment.destroy
-    redirect_to authenticate_root_path
+
+    if @comment.user_id == current_user.id
+      @comment.destroy
+      respond_to do |format|
+        format.html { redirect_to authenticate_root_path}
+        format.js
+      end
+    end
   end
 
   private
