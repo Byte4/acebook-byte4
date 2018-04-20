@@ -23,5 +23,11 @@ feature "Creating comments" do
     expect(page).to have_css("div#comment-#{comment.id}", text: "Maria: test comment")
   end
 
+  scenario 'user can see their profile picture on top of the post' do
+    sign_in_with(user)
+    fill_in_comment_with(comment)
+    expect(page).to have_css("div#comment-#{comment.id}", "img[src*='avatar.jpg']")
+  end
+
 
 end
