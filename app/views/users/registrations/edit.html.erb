@@ -1,7 +1,7 @@
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
-
-  <div class="card border-dark mb-3" style="max-width: 18rem;">
+  <div class="card border-dark mb-3 signup-sheet mx-auto">
     <div class="card-header">Edit Account Info</div>
     <div class="card-body text-dark" id= "edit-acct-info-sheet">
       <h5 class="card-title">First Name</h5>
@@ -55,11 +55,11 @@
     </div>
   </div>
 
-  <div class="card border-danger mb-3" id="delete-account-form" style="max-width: 18rem;">
+  <div class="card border-danger mb-3 signup-sheet mx-auto" id="delete-account-form">
     <div class="card-header">Cancel my account</div>
     <div class="card-body text-dark">
       <h5 class="card-title">Unhappy?</h5>
-      <p>Unhappy? <%= button_to "Delete my account", registration_path(resource_name), class: "btn btn-danger", data: { confirm: "Are you sure?" }, method: :delete %></p>
+      <%= button_to "Delete my account", registration_path(resource_name), class: "btn btn-danger", data: { confirm: "Are you sure?" }, method: :delete %>
     </div>
     <div class="card-footer bg-transparent border-danger">This will permanently delete your account</div>
   </div>
