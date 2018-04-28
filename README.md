@@ -2,7 +2,7 @@
 
 # AceBook <a href="https://codeclimate.com/github/Byte4/acebook-byte4/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a> <a href="https://codeclimate.com/github/Byte4/acebook-byte4/test_coverage"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" /></a>
 
-AceBook is a social media platform that enables users to create profiles, share, like, dislike and comment on posts. This project was built in 10 days by Team byte4 of the February 2018 cohort at Makers Academy. Read about our blog about the journey [here](https://medium.com/acebook-byte4).
+AceBook is a social media platform that enables users to create profiles, share, like, dislike and comment on posts. This project was built in 10 days by Team byte4 of the February 2018 cohort at Makers Academy. Read about this journey in our [blog](https://medium.com/acebook-byte4).
 
 ## Technologies used
 - Back-end
@@ -57,8 +57,8 @@ In a web browser, visit `localhost:3000` and register to Acebook to start postin
 
 
 ### Screenshots
-![Alt text](/Users/agnesdonat/Projects/acebook-byte4/spec/images/Screen Shot 2018-04-20 at 14.06.31.png)
-![Alt text](/Users/agnesdonat/Projects/acebook-byte4/spec/images/Screen Shot 2018-04-20 at 14.05.31.png)
+![Alt text](/Users/agnesdonat/Projects/acebook-byte4/spec/images/image1.png)
+![Alt text](/Users/agnesdonat/Projects/acebook-byte4/spec/images/image2.png)
 
 
 ### Testing
