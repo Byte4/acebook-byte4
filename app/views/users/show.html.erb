@@ -1,6 +1,6 @@
 <div class="card mx-auto" style="width: 30rem; margin-top: 5rem">
   <!-- div below will host the picture -->
-  <%= image_tag @user.avatar.url(:thumb), class: "card-img-top" %><br/>
+  <%= image_tag @user.avatar.url(:medium), class: "card-img-top" %><br/>
   <div class="card-body">
     <h5 class="card-title">
       <%= "#{@user.first_name } #{@user.last_name}"%>
