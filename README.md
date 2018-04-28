@@ -57,8 +57,8 @@ In a web browser, visit `localhost:3000` and register to Acebook to start postin
 
 
 ### Screenshots
-![Alt text](/Users/agnesdonat/Projects/acebook-byte4/spec/images/image1.png)
-![Alt text](/Users/agnesdonat/Projects/acebook-byte4/spec/images/image2.png)
+![Alt text](./spec/images/image1.png)
+![Alt text](./spec/images/image2.png)
 
 
 ### Testing
